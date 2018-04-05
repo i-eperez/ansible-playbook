@@ -1,0 +1,9 @@
+- hosts: localhost
+   become: True
+   vars:
+     # created with:
+     # python -c 'import crypt; print crypt.crypt("This is my Password", "$1$SomeSalt$")'
+     password: $1$SomeSalt$aIJ0bvHJBSYd307VQuuD90
+
+   tasks:
+     - user: name=tset password={{password}} state=present
