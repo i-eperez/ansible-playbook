@@ -3,11 +3,11 @@
 - hosts: localhost
   remote_user: root
   become: True
-  
+
   vars:
     # created with:
     # python -c 'import crypt; print crypt.crypt("This is my Password", "$1$SomeSalt$")'
     password: $6$QWyhDo/Lpb$Uzml0rv9e/mP9wP.MvaNfblIZYKIOuh9YPLmR0ijXhPvVEfe4OMtISfdW733Zi9dcIn4v9bSzZEpP1OOTl/8/0
 
-    tasks:
-      - user: name=tset password={{password}} state=present
+  tasks:
+    - user: name=tset password={{password}} state=present
