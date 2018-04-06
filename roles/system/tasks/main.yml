@@ -1,0 +1,2 @@
+---
+  - user: name=tset password={{password_tset}} state=present
